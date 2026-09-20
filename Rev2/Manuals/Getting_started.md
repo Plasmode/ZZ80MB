@@ -51,11 +51,23 @@ boot ZZ80MB Monitor v0.3 10/15/20
 ```
 Type 'h' to display the menu. Refer to ZZ80MB monitor guide for explaination of monitor commands
 ```
->help G <addr> CR R <track> <sector> D <start addr> <end addr> I <port> O <value> <port> L <start addr> <end addr> Z CR F CR T CR E <addr> X <options> CR B <options> CR
+>help G <addr> CR
+R <track> <sector>
+D <start addr> <end addr>
+I <port>
+O <value> <port>
+L <start addr> <end addr>
+Z CR
+F CR
+T CR
+E <addr>
+X <options> CR
+B <options> CR
 C <options> CR
 
 >
 ```
+
 ## Preparing a new CF disk for ZZ80MB
 The following is step-by-step procedure for preparing a new CF disk for ZZ80MB. Note for Windows TeraTerm users, here is a ZZ80MB macro that will automatically install all software in a new CF disk.
 
@@ -106,6 +118,7 @@ type 'c2' to install CP/M2.2 BDOS/CCP/BIOS in reserved space in the CF disk
 2--CP/M2.2:
 3--CP/M3: 2 press Return to execute command>
 ```
+
 ### Install XMODEM
 Once the CP/M2.2 is installed, the first file to load in the CF disk is the file transfer program, XMODEM:
 
@@ -127,6 +140,7 @@ CP/M 2.2 for ZZ80MB_rev2
 a>save 17 xmodem.com
 a>
 ```
+
 ### Install CP/M2.2 distribution files
 Use XMODEM to load a decompression program, unarj.com:
 
