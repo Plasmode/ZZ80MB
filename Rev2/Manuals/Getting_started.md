@@ -1,6 +1,6 @@
 # Getting Started with ZZ80MB rev2
 ## Introduction
-This guide assumes the assembly of rev2 of ZZ80MB is completed and components populated as shown in the last picture of ZZ80MB pictorial assembly guide. This guide shows how to program the EPROM and how to load software in the CF disk.
+This guide assumes the assembly of rev2 of ZZ80MB is completed and components populated as shown in the last picture of ZZ80MB [pictorial assembly guide](Assembly_guide.md). This guide shows how to program the EPROM and how to load software in the CF disk.
 
 ## Power up ZZ80MB
 Picture below shows how ZZ80MB should be connected
@@ -12,22 +12,22 @@ Set jumper T1, T2, T9 and T10 as shown in Figure 1.
 ![serial_boot](ZZ80MB_rev2_serial_bootstrap.jpg)
 
 Set the terminal emulation parameters to 115200, Odd parity, 8 data bits and 1 stop bit. Power up ZZ80MB and send Tinyload.bin. Be sure to check the “Binary” box. The terminal will display the following message:
-
+```
 TinyLoad 1
 G xxxx when done
-
+```
 Uncheck the “binary box” and leave it unchecked for the remaining operation; send progSST39F040.hex. When the load is completed, type “G 8000” ← upper case 'G', and 8000 will not echo back.
 
 The following message will be displayed:
-
+```
 …………………………………………UX
 G
 ZZ80MB Programmer for SST39SF040 ver 0.1 10/1220
 SST39SF040 will now be erased
 Enter Y to proceed, all other keys to abort
-
+```
 Type 'Y' ←upper case 'Y' to erase SST39F040, then send 'ZZ80MBmon.hex'. The program is completed when “Programming is done” message is displayed. Below is a programming session as displayed on the terminal emulator.
-
+```
 TinyLoad 1
 G xxxx when done
 …………………………………………UX
@@ -39,22 +39,23 @@ SST39SF040 erased, ready to upload the image file
 ……………………………………………………………………………………………………………………………………………………………………….UX
 
 Programming is done
+```
 ## EPROM Bootstrap
 Move jumper T1, T2, T10 and T11 as shown in Figure 2
 ![eprom_boot](ZZ80MB_rev2_eprom_bootstrap.jpg)
 
 Set the terminal emulation parameters to 115200, Odd parity, 8 data bits and 1 stop. Apply power and the following sign-on message should be displayed.
-
+```
 boot ZZ80MB Monitor v0.3 10/15/20
 >
-
+```
 Type 'h' to display the menu. Refer to ZZ80MB monitor guide for explaination of monitor commands
-
+```
 >help G <addr> CR R <track> <sector> D <start addr> <end addr> I <port> O <value> <port> L <start addr> <end addr> Z CR F CR T CR E <addr> X <options> CR B <options> CR
 C <options> CR
 
 >
-
+```
 ## Preparing a new CF disk for ZZ80MB
 The following is step-by-step procedure for preparing a new CF disk for ZZ80MB. Note for Windows TeraTerm users, here is a ZZ80MB macro that will automatically install all software in a new CF disk.
 
@@ -68,7 +69,7 @@ type 'xB' followed by carriage return to initialize drive B
 type 'xC' followed by carriage return to initialize drive C
 
 type 'xD' followed by carriage return to initialize drive D
-
+```
 >x clear disk directories
 A -- drive A,
 B -- drive B:
@@ -93,16 +94,18 @@ B -- drive B:
 C -- drive C,
 D -- drive D,
 D press Return to execute command
+```
 ### Install CP/M2.2 BDOS/CCP/BIOS
 At ZZ80MB monitor command prompt, send 'cpm22all.hex' to ZZ80MB
 
 type 'c2' to install CP/M2.2 BDOS/CCP/BIOS in reserved space in the CF disk
-
+```
 .........................................................................................................................................................................................................................................................................................................................................................................................................................UX>>copy to CF disk
 
 1--User Apps,
 2--CP/M2.2:
 3--CP/M3: 2 press Return to execute command>
+```
 ### Install XMODEM
 Once the CP/M2.2 is installed, the first file to load in the CF disk is the file transfer program, XMODEM:
 
@@ -111,7 +114,7 @@ At ZZ80MB monitor command prompt, send XMODEM.HEX to ZZ80MB
 type 'b2' to boot into CP/M2.2. The XMODEM image is in RAM memory, so
 
 at CP/M prompt, type 'save 17 xmodem.com'. This will create a file named XMODEM.COM with size of 17 records.
-
+```
 ....................................................................................................................................X//>>boot CP/M
 
 1--User Apps,
@@ -123,6 +126,7 @@ CP/M 2.2 for ZZ80MB_rev2
 
 a>save 17 xmodem.com
 a>
+```
 ### Install CP/M2.2 distribution files
 Use XMODEM to load a decompression program, unarj.com:
 
@@ -135,7 +139,7 @@ Assuming CP/M2.2 resides on drive B,
 At CP/M prompt, type 'b:' to switch to drive B
 
 At CP/M prompt, type 'a:unarj e a:cpm22dri' to decompress CP/M distribution files to drive B.
-
+```
 xmodem unarj.com /r
 
 File created
@@ -178,6 +182,7 @@ Extracting: XMODEM.COM   OK
 Extracting: XSUB.COM   OK
 
 b>
+```
 ### Install CP/M 3 and CP/M 3 distribution files
 At ZZ80MB monitor prompt, send 'cpm3ldr.hex'
 
@@ -192,7 +197,7 @@ At CP/M prompt, type 'unarj e cpm3all', this will install CP/M3 in drive A
 Press reset to exit to ZZ80MB monitor,
 
 At ZZ80MB monitor prompt, type 'b3' to boot into CP/M3
-
+```
 >.......................................................................................................................X>>copy to CF disk
 
 1--User Apps,
@@ -304,6 +309,7 @@ Copyright (C) 1982, Digital Research
 Copyright 1979 (c) by Digital Research
 CP/M 3 for ZZ80MB_rev2 10/15/20
 A>
+```
 ### Install SCMonitor with built-in Startrek BASIC program
 At ZZ80MB monitor prompt, send 'SCMonitor_startrek.hex'
 
@@ -316,7 +322,7 @@ To run the built-in Startrek BASIC program,
 At SCMonitor prompt, type 'wbasic' to warm boot BASIC
 
 At BASIC prompt, type 'run', the StarTrek program will now run.
-
+```
 >....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................X
 >copy to CF disk
 1--User Apps,
@@ -329,3 +335,4 @@ At BASIC prompt, type 'run', the StarTrek program will now run.
 
 Small Computer Monitor - RCZ280
 *
+```
