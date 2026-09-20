@@ -4,10 +4,8 @@ Please note, this is rev0 of ZZ80MB, it is superceded by ZZ80MB rev3.
 
 ZZ80MB is a Z280-based motherboard with RC2014 expansion slots. It is based on the ZZ80RC-CF design, but with additional expansion slots added.
 
-
-
-
-
+![topview](ZZ80MB_rev0_topview.jpg)
+![sideview](ZZ80MB_rev0_sideview.jpg)
 
 ### Features
 - Z280 CPU configured to Z80-compatible mode running at 24MHz with selectable bus speed of 12 MHzor 6 MHz
