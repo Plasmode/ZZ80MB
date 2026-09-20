@@ -1,6 +1,6 @@
 # ZZ80MB Rev3, A Z280-based SBC with RC2014 Expansion
 Introduction
-ZZ80MB is a Z280-based motherboard with RC2014 expansion slots. It is based on the ZZ80RC-CF design, but with two additional expansion slots added. ZZ80MB is designed with an EPROM programmer function such that it can boot from serial port, load EPROM programming image through the serial port and program an EPROM. This feature can be used to program EPROM for other computers. Rev3 corrected a Z280 hardware bug in ZZ80MB rev2.
+ZZ80MB is a Z280-based motherboard with RC2014 expansion slots. It is based on the ZZ80RC-CF design, but with two additional expansion slots added. ZZ80MB is designed with an EPROM programmer function such that it can boot from serial port, load EPROM programming image through the serial port and program an EPROM. This feature can be used to program EPROM for other computers. Rev3 corrected a Z280 hardware bug in [ZZ80MB rev2](../Rev2).
 
 ![sideview](ZZ80MB_rev3_sideview.jpg)
 
@@ -9,8 +9,8 @@ ZZ80MB is a Z280-based motherboard with RC2014 expansion slots. It is based on t
 - 1/2 megbyte of RAM
 - 1/2 megabyte of EPROM
 - Two modes of operation,
-- Serial bootstrap mode, loading files from serial port,
-- EPROM bootstrap mode.
+  - Serial bootstrap mode, loading files from serial port,
+  - EPROM bootstrap mode.
 - CP/M 2.2 and CP/M 3 ready.
 - CF interface supports 4 CF drives
 - 3 RC2014 expansion slots
@@ -21,9 +21,9 @@ ZZ80MB is a Z280-based motherboard with RC2014 expansion slots. It is based on t
 
 ![annotated](zz80mb_r3_annotated_topview.jpg)
 ### Design Information
-- Schematic
-- Gerber photo plots
-- Bill of materials
+- [Schematic](zz80mb_r3_scm.pdf)
+- [Gerber photo plots](zz80mb_rev3_gerber.zip)
+- [Bill of materials](zz80mb_rev3_bom.pdf)
 
 ### Software
 Prior to loading serial bootstrap loader and ZZ80MB monitor, set the serial emulation software to 115200, odd parity, 8 data, 1 stop. Set the jumpers on ZZ80MB to “RAM” position and Bootstrap to “Serial” position. Note, the 115200 O81setting and RAM-Serial jumper positions are only for programming the flash; all subsequent software operate with 115200 N81 setting and EPROM bootstrap position.
@@ -31,9 +31,7 @@ Prior to loading serial bootstrap loader and ZZ80MB monitor, set the serial emul
 - Serial bootstrap loader, This is the 256-byte bootstrap as a raw binary file. It is received by ZZ80MB's UART and copied to RAM starting from location 0x0. If TeraTerm is the terminal software, check the 'Binary' box in 'Send file…' menu then send the file.
 - SST39F040 programmer, rev 0.1. This is the SST39F040 programmer. ZZ80MB is set to 'RAM' and 'Serial' bootstrap jumper positions. The terminal is set to 115200 odd parity. The serial bootstrap loader is loader first followed by progSST39F040. Issue the command 'G8000' (←'G' is upper case, '8000' will not echo back) to invoke progSST39F040. The program will prompt the user to erase SST39F040 and then load the hex file to be programmed.
 - ZZ80MB Monitor rev 0.5 This is the program to be burn in the flash memory. Once EPROM is programmed, set the serial port to 115200, no parity, 8-data, 1-stop and set the jumpers on ZZ80MB to “EPROM” position and Bootstrap to “EPROM” position. This is the setting for normal operation.
-
 - CP/M2.2 BIOS/BDOS/CCP CP/M2.2 executable tailored for ZZ80MB. It is loaded into memory with ZZ80CFMon, then use 'c2' command to store it in CF disk and use 'b2' command to boot into CP/M2.2.
-
 - SCMonitor with Startrek. This is Steve Cousin's SCMonitor ported to ZZ80MB. The popular StarTrek program is included. To invoke Startrek, type 'wbasic' at SCMonitor prompt, followed by 'run'. To save SCMonitor in CF disk, send scmonitor_startrek.hex to ZZ80MB, then type 'c1' to store it in CF disk. To run SCMonitor, type 'b1'.
 
 ### Manuals and Instructions
