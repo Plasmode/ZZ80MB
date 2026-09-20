@@ -5,7 +5,7 @@
 
 ![annotated](zz80mb_rev2_annotated.jpg)
 
-### Design Information  (Obsoleted design, archival only)
+### Design Information  (Obsoleted design, archival use only)
 - [Schematic](zz80mb_r2_scm.pdf)
 - [Gerber photoplots](zz80mb_rev2.zip)
 - [Bill of Materials](zz80mb_rev2_bom.pdf)
