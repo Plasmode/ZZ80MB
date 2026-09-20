@@ -36,7 +36,7 @@ Prior to loading serial bootstrap loader and ZZ80MB monitor, set the serial emul
 
 ### Manuals and Instructions
 - Pictorial assembly guide for [ZZ80MB rev2](../Rev2/Manuals/Assembly_guide.md)
-- Getting Started with ZZ80MB
+- [Getting Started](../Rev2/Manuals/Getting_started.md) with ZZ80MB
 - ZZ80MB Monitor Guide
 - [Z280 Technical Manual](https://github.com/Plasmode/ZZRCC/blob/main/Manuals/z280_mpu_noocr_bw_400_.pdf)
 
