@@ -1,6 +1,6 @@
 # ZZ80MB Rev0, A Z280-based Motherboard with RC2014 Expansion (Obsolete)
 ### Introduction
-Please note, this is rev0 of ZZ80MB, it is superceded by ZZ80MB rev3.
+Please note, this is rev0 of ZZ80MB, it is superceded by [ZZ80MB rev3](..Rev3).
 
 ZZ80MB is a Z280-based motherboard with RC2014 expansion slots. It is based on the ZZ80RC-CF design, but with additional expansion slots added.
 
@@ -19,8 +19,8 @@ ZZ80MB is a Z280-based motherboard with RC2014 expansion slots. It is based on t
 - A standalone single-board computer with I/O expansion bus compatible with RC2014 I/O bus
 
 ### Design Information
-- Schematic
-- Gerber photoplots
+- [Schematic](zz80mb_r0_scm.pdf)
+- [Gerber photoplots](zz80mb_r0.zip)
 - Bill of Materials
 
 ### Software
