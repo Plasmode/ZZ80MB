@@ -4,12 +4,12 @@ This guide assumes the assembly of rev2 of ZZ80MB is completed and components po
 
 ## Power up ZZ80MB
 Picture below shows how ZZ80MB should be connected
-![power_serial(Manuals/zz80mb_power_serial.jpg)
+![power_serial(zz80mb_power_serial.jpg)
 
 
 ## Programming the SST39F040 EPROM
 Set jumper T1, T2, T9 and T10 as shown in Figure 1.
-![serial_boot](Manuals/ZZ80MB_rev2_serial_bootstrap.jpg)
+![serial_boot](ZZ80MB_rev2_serial_bootstrap.jpg)
 
 Set the terminal emulation parameters to 115200, Odd parity, 8 data bits and 1 stop bit. Power up ZZ80MB and send Tinyload.bin. Be sure to check the “Binary” box. The terminal will display the following message:
 
@@ -41,7 +41,7 @@ SST39SF040 erased, ready to upload the image file
 Programming is done
 ## EPROM Bootstrap
 Move jumper T1, T2, T10 and T11 as shown in Figure 2
-![eprom_boot](Manuals/ZZ80MB_rev2_eprom_bootstrap.jpg)
+![eprom_boot](ZZ80MB_rev2_eprom_bootstrap.jpg)
 
 Set the terminal emulation parameters to 115200, Odd parity, 8 data bits and 1 stop. Apply power and the following sign-on message should be displayed.
 
