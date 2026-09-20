@@ -107,18 +107,19 @@ C -- drive C,
 D -- drive D,
 D press Return to execute command
 ```
+
 ### Install CP/M2.2 BDOS/CCP/BIOS
 At ZZ80MB monitor command prompt, send 'cpm22all.hex' to ZZ80MB
 
 type 'c2' to install CP/M2.2 BDOS/CCP/BIOS in reserved space in the CF disk
 ```
-.........................................................................................................................................................................................................................................................................................................................................................................................................................UX>>copy to CF disk
+.........................................................................................................................................................................................................................................................................................................................................................................................................................UX
+>>copy to CF disk
 
 1--User Apps,
 2--CP/M2.2:
 3--CP/M3: 2 press Return to execute command>
 ```
-
 ### Install XMODEM
 Once the CP/M2.2 is installed, the first file to load in the CF disk is the file transfer program, XMODEM:
 
@@ -128,7 +129,8 @@ type 'b2' to boot into CP/M2.2. The XMODEM image is in RAM memory, so
 
 at CP/M prompt, type 'save 17 xmodem.com'. This will create a file named XMODEM.COM with size of 17 records.
 ```
-....................................................................................................................................X//>>boot CP/M
+....................................................................................................................................X//
+>>boot CP/M
 
 1--User Apps,
 2--CP/M2.2:
@@ -140,7 +142,6 @@ CP/M 2.2 for ZZ80MB_rev2
 a>save 17 xmodem.com
 a>
 ```
-
 ### Install CP/M2.2 distribution files
 Use XMODEM to load a decompression program, unarj.com:
 
@@ -212,7 +213,8 @@ Press reset to exit to ZZ80MB monitor,
 
 At ZZ80MB monitor prompt, type 'b3' to boot into CP/M3
 ```
->.......................................................................................................................X>>copy to CF disk
+>.......................................................................................................................X
+>>copy to CF disk
 
 1--User Apps,
 2--CP/M2.2:
