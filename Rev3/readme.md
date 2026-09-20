@@ -35,10 +35,10 @@ Prior to loading serial bootstrap loader and ZZ80MB monitor, set the serial emul
 - [SCMonitor with Startrek](Software/scmonitor_for_zz80mb_with_startrek.zip). This is Steve Cousin's SCMonitor ported to ZZ80MB. The popular StarTrek program is included. To invoke Startrek, type 'wbasic' at SCMonitor prompt, followed by 'run'. To save SCMonitor in CF disk, send scmonitor_startrek.hex to ZZ80MB, then type 'c1' to store it in CF disk. To run SCMonitor, type 'b1'.
 
 ### Manuals and Instructions
-- Pictorial assembly guide for ZZ80MB rev2
+- Pictorial assembly guide for [ZZ80MB rev2](../Rev2/Manuals/Assembly_guide.md)
 - Getting Started with ZZ80MB
 - ZZ80MB Monitor Guide
-- Z280 Technical Manual
+- [Z280 Technical Manual](https://github.com/Plasmode/ZZRCC/blob/main/Manuals/z280_mpu_noocr_bw_400_.pdf)
 
 ### Alternative DOM Configuration
 A disk-on-module (DOM) can be mounted on the bottom of the ZZ80MB as shown in the pictures below
