@@ -1,0 +1,34 @@
+# ZZ80MB Rev2 Pictorial Assembly Guide
+Bare PC board, component side
+
+www.retrobrewcomputers.org_lib_plugins_ckgedit_fckeditor_userfiles_image_builderpages_plasmo_zz80mb_zz80mbr2_assembly_guide_dsc_60761017.jpg
+
+Bare PC board, solder side
+
+www.retrobrewcomputers.org_lib_plugins_ckgedit_fckeditor_userfiles_image_builderpages_plasmo_zz80mb_zz80mbr2_assembly_guide_dsc_60771017.jpg
+
+Assemble the lowest height components first.
+
+Assemble the resistors
+
+www.retrobrewcomputers.org_lib_plugins_ckgedit_fckeditor_userfiles_image_builderpages_plasmo_zz80mb_zz80mbr2_dsc_60751017_copy.jpg
+
+Next assemble the capacitors
+
+www.retrobrewcomputers.org_lib_plugins_ckgedit_fckeditor_userfiles_image_builderpages_plasmo_zz80mb_zz80mbr2_dsc_60781017_copy.jpg
+
+Install IC sockets
+
+www.retrobrewcomputers.org_lib_plugins_ckgedit_fckeditor_userfiles_image_builderpages_plasmo_zz80mb_zz80mbr2_assembly_guide_dsc_60791017.jpg
+
+Install headers and bus connectors
+
+www.retrobrewcomputers.org_lib_plugins_ckgedit_fckeditor_userfiles_image_builderpages_plasmo_zz80mb_zz80mbr2_assembly_guide_dsc_60801017.jpg
+
+Install remaining hardware except CF adapter
+
+www.retrobrewcomputers.org_lib_plugins_ckgedit_fckeditor_userfiles_image_builderpages_plasmo_zz80mb_zz80mbr2_dsc_60811017.jpg
+
+Install CF adapter last and populate the board with IC
+
+www.retrobrewcomputers.org_lib_plugins_ckgedit_fckeditor_userfiles_image_builderpages_plasmo_zz80mb_zz80mbr2_assembly_guide_dsc_60851018.jpg
