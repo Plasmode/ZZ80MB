@@ -4,7 +4,7 @@ This guide assumes the assembly of rev2 of ZZ80MB is completed and components po
 
 ## Power up ZZ80MB
 Picture below shows how ZZ80MB should be connected
-![power_serial(zz80mb_power_serial.jpg)
+![power_serial](zz80mb_power_serial.jpg)
 
 
 ## Programming the SST39F040 EPROM
